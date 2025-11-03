@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find the Number Game</title>
+</head>
+<body>
+  <script>
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    let guess;
+    let attempts = 0;
+    alert("Welcome to the 'Find the Number' Game!");
+    alert("I have picked a number between 1 and 100. Try to guess it!");
+    while (true) {
+      guess = prompt("Enter your guess (between 1 and 100):");
+      attempts++;
+      guess = Number(guess);
+      if (guess < 1 || guess > 100) {
+        alert("Please enter a valid number between 1 and 100!");
+        continue;
+      }
+      if (guess === randomNumber) {
+        alert(`Correct! The number was ${randomNumber}. You guessed it in ${attempts} attempts.`);
+        break;
+      } else if (guess > randomNumber) {
+        alert("Too high! Try a smaller number.");
+      } else {
+        alert("Too low! Try a larger number.");
+      }
+    }
+  </script>
+</body>
+</html>

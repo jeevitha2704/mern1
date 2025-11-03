@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Traffic Signal Managing Console</title>
+</head>
+<body>
+  <h2>Open the Console to View the Traffic Signal Simulation</h2>
+  <script>
+    const signals = [
+      { color: "RED", message: "STOP", duration: 3000 },
+      { color: "GREEN", message: "GO", duration: 4000 },
+      { color: "YELLOW", message: "WAIT", duration: 2000 }
+    ];
+
+    let currentIndex = 0;
+    let running = false;
+    let timer;
+
+    function showSignal() {
+      const signal = signals[currentIndex];
+      console.clear();
+      console.log("🚦 TRAFFIC SIGNAL MANAGING CONSOLE 🚦");
+      console.log(`Current Signal: ${signal.color}`);
+      console.log(`Status: ${signal.message}`);
+
+      timer = setTimeout(() => {
+        currentIndex = (currentIndex + 1) % signals.length;
+        if (running) showSignal();
+      }, signal.duration);
+    }
+
+    function startSignal() {
+      if (!running) {
+        running = true;
+        console.log("Starting Traffic Signal...");
+        showSignal();
+      } else {
+        console.log("Signal already running.");
+      }
+    }
+
+    function stopSignal() {
+      if (running) {
+        running = false;
+        clearTimeout(timer);
+        console.log("Traffic Signal stopped.");
+      } else {
+        console.log("Signal is not running.");
+      }
+    }
+    startSignal();
+    setTimeout(stopSignal, 20000);
+  </script>
+</body>
+</html>
