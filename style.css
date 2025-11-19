@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f5f5f5;
+}
+
+/* Navigation Bar */
+nav {
+    background: #111;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00adb5;
+}
+
+/* Sections */
+section {
+    padding: 80px 60px;
+}
+
+/* Home Section */
+#home {
+    background: linear-gradient(#000000aa, #000000aa),
+        url("https://images.unsplash.com/photo-1503264116251-35a269479413");
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 130px 60px;
+}
+
+#home h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+#home p {
+    font-size: 1.2rem;
+}
+
+/* About Section */
+#about {
+    background: white;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0px 0px 10px #aaa;
+}
+
+#about h2, #education h2, #projects h2,#contact h2 {
+    color: #111;
+    border-left: 4px solid #00adb5;
+    padding-left: 10px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Education Cards */
+.edu-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0px 0px 8px #ccc;
+}
+
+.edu-card h3 {
+    margin: 0;
+    color: #00adb5;
+}
+
+/* Contact Section */
+#contact {
+    background: #e2f5f7;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0px 0px 10px #aaa;
+}
+
+#contact p {
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
